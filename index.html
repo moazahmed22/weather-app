@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gothic+A1&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>weather forecast</title>
+  </head>
+  <body class="vh-100">
+    <!-- header section -->
+    <header class="p-md-5 py-3">
+      <div
+        class="container d-flex align-items-center justify-content-center gap-2"
+      >
+        <div class="svg-container">
+          <svg
+            class=""
+            viewBox="0 0 91 124"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M67 46.4883C67 58.3624 57.3741 67.9883 45.5 67.9883C33.6259 67.9883 24 58.3624 24 46.4883C24 34.6142 33.6259 24.9883 45.5 24.9883C57.3741 24.9883 67 34.6142 67 46.4883ZM30.7867 46.4883C30.7867 54.6142 37.3741 61.2016 45.5 61.2016C53.6259 61.2016 60.2133 54.6142 60.2133 46.4883C60.2133 38.3624 53.6259 31.775 45.5 31.775C37.3741 31.775 30.7867 38.3624 30.7867 46.4883Z"
+              fill="white"
+            />
+            <path
+              d="M5 46.3271C5 90.4883 45.5296 118.988 45.5296 118.988C45.5296 118.988 85.6946 90.4883 85.6946 46.5228C85.6946 35.5 76 5.48828 45.5296 5.48828C15.0592 5.48828 5.36513 35.5 5 46.3271Z"
+              stroke="white"
+              stroke-width="9"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <!-- location selector -->
+        <input
+          name=""
+          id="locationSelector"
+          class="bg-transparent p-1 border border-1 border-dark-subtle rounded-2 text-white p-0"
+        />
+        <!-- date of the day -->
+        <p class="m-0">(<span class="date-of-day">Friday, January 4</span>)</p>
+      </div>
+    </header>
+    <!-- main body -->
+    <main class="p-5 mt-0 mt-md-5">
+      <div id="myRow" class="row gap-5 gap-md-0"></div>
+    </main>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/index.js" defer></script>
+  </body>
+</html>

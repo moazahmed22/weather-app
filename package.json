@@ -1,0 +1,15 @@
+{
+  "name": "moaz-ahmed-sun-wen-3-6-online-weatherapp-01067909906",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.7.2",
+    "bootstrap": "^5.3.7"
+  }
+}
