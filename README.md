@@ -28,3 +28,11 @@ npm install npm@latest -g
 ```bash
 git clone https://github.com/github_username/repo_name.git
 ```
+
+2. Navigate into the project directory
+```bash
+
+```
+3. Install NPM packages
+```bash
+```
