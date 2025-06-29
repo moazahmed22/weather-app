@@ -1,6 +1,6 @@
-# Project Title
+# Weather Forecast
 
-A brief description of what this project does and who it's for.
+A weather forecast is a small project created using **weatherapi**
 
 ## 🚀 Getting Started
 
