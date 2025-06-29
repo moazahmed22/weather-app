@@ -26,13 +26,14 @@ npm install npm@latest -g
 1. **Clone the repository**
 
 ```bash
-git clone https://github.com/github_username/repo_name.git
+git clone https://github.com/moazahmed22/weather-app.git
 ```
 
 2. Navigate into the project directory
 ```bash
-
+cd <directory-path>
 ```
 3. Install NPM packages
 ```bash
+npm install
 ```
