@@ -1,6 +1,5 @@
 # Weather Forecast
-
-A weather forecast is a small project created using **weatherapi**
+The weather forecast is a small project created using **weatherapi**
 
 ## 🚀 Getting Started
 
