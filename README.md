@@ -19,16 +19,11 @@ Before you begin, ensure you have the following installed:
 To install or update npm globally, run:
 
 ```bash
-npm install npm@latest -g
+npm install npm@latest -g```
+## 🛠️ Installation
 
-🛠️ Installation
-Follow these steps to install and set up the project:
+1. **Clone the repository**
 
-Clone the repository
-
+```bash
 git clone https://github.com/github_username/repo_name.git
-
-cd repo_name
-Install NPM packages
-
-npm install
+```
