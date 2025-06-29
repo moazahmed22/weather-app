@@ -22,10 +22,12 @@ const months = [
   "November",
   "December",
 ];
-// const adviceQuotes = {
-//     hotWeather: '',
-//     coldWeather: '',
-// }
+const adviceQuotes = [
+  "today's forecast: windy with a 100% chance of eating a pulled brisket sandwich.",
+  "Weather forecast for tonight: dark. Continued dark overnight, with widely scattered light by morning",
+  "Climate is what we expect; weather is what we get.",
+  "There is no such thing as bad weather, only inappropriate clothing.",
+];
 
 const myRow = document.querySelector("#myRow");
 const myLocation = document.querySelector("#locationSelector");
@@ -37,7 +39,7 @@ dateOfTheDay.innerHTML = `${daysOfWeek[date.getDay()]}, ${
 } ${date.getDate()}`;
 
 // function to display the weather forecast
-let displayWeather = async ({ location, current, forecast }) => {
+let displayWeather = ({ location, current, forecast }) => {
   myRow.innerHTML = ` <!-- first section where we view the weather forecast of the current day -->
         <div id="weatherOfTheDay" class="col-md-3 d-flex flex-column gap-5">
           <div class="container">
@@ -73,8 +75,6 @@ let displayWeather = async ({ location, current, forecast }) => {
         <!-- second section to view an image illustrating the weather forecast -->
        <div class="col-md-6 d-flex justify-content-center align-items-center">
           <p id="adviceQuote" class="h1">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit,
-            excepturi.
           </p>
         </div>
         <!-- third section viewing the forecast for the next 3 days -->
@@ -113,7 +113,7 @@ let displayWeather = async ({ location, current, forecast }) => {
   forecastContainer.children[0].classList.add("today");
 };
 
-//  function to get the weater forecast via API
+//  function to get the weater forecast via API and display it in the DOM
 let getForecast = async (location) => {
   try {
     let request = await fetch(
@@ -130,21 +130,34 @@ let getForecast = async (location) => {
   }
 };
 
+// function to generate the quotes after the first render
+let generateQuote = () => {
+  let index = 0;
+  const quote = document.querySelector("#adviceQuote");
+  quote.textContent = adviceQuotes[index];
+  setInterval(() => {
+    index = index === adviceQuotes.length - 1 ? 0 : index + 1;
+    console.log(index);
+    quote.textContent = adviceQuotes[index];
+  }, 6000);
+};
+
 // displaying the user's location forecast
 let usersForecast = async () => {
   try {
     let req = await fetch(`http://ip-api.com/json/`);
     let res = await req.json();
     let userLocation = res.city;
-    getForecast(userLocation);
+    await getForecast(userLocation);
+    generateQuote();
   } catch (error) {
     console.error(error);
   }
 };
+
 usersForecast();
 
-// function to get the location of the user
-// eveten listener to get the forecast of inputed location
+// event listener to get the forecast of inputed location
 myLocation.addEventListener("input", (e) => {
   getForecast(e.target.value);
 });
