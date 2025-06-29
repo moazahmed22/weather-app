@@ -19,7 +19,8 @@ Before you begin, ensure you have the following installed:
 To install or update npm globally, run:
 
 ```bash
-npm install npm@latest -g```
+npm install npm@latest -g
+```
 ## 🛠️ Installation
 
 1. **Clone the repository**
