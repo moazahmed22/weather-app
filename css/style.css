@@ -43,6 +43,9 @@ p {
   #title {
     color: var(--secondary-color);
   }
+  .country {
+    text-wrap: wrap;
+  }
 }
 /* third section */
 .forecast {
